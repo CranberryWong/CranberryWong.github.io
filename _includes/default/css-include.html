@@ -1,0 +1,119 @@
+{%- comment -%}
+  Developed by Chen Wang, 2022-12-30
+  Based on the Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+{%- endcomment -%}
+
+{% if site.data.conf.main.use_cdn_resources_if_available -%}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{%- else %}
+  <link href="{{ site.baseurl }}/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ site.baseurl }}/assets/css/font-awesome.min.css" rel="stylesheet">
+{%- endif %}
+
+<link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
+
+{%- if site.data.conf.posts.post_table_of_contents and page.layout == "post"-%}
+  {% if site.data.conf.main.use_cdn_resources_if_available -%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v0.4.1/dist/bootstrap-toc.min.css">
+  {%- else %}
+    <link href="{{ site.baseurl }}/assets/css/bootstrap-toc.min.css" rel="stylesheet">
+  {%- endif %}
+{% endif -%}
+
+{%- assign img_viewer = nil -%}
+{%- if site.data.conf.main.image_viewer == true -%}
+  {%- if page.image_viewer_on == true or site.data.conf.main.image_viewer_posts == true and page.layout == 'post' -%}
+    {%- assign img_viewer = true -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if img_viewer == true -%}
+  {% if site.data.conf.main.use_cdn_resources_if_available -%}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+  {%- else %}
+    <link href="{{ site.baseurl }}/assets/css/magnific-popup.css" rel="stylesheet">
+  {%- endif %}
+{% endif -%}
+
+<link href="{{ site.baseurl }}/assets/css/nav-media.css" rel="stylesheet">
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/vendor/aos/dist/aos.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/vendor/hs-video-bg/dist/hs-video-bg.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/vendor/swiper/swiper-bundle.min.css">
+
+<!-- CSS Front Template -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.min.css">
+
+<style>
+
+  @font-face {
+    font-family: 'pingfang';
+    src: url('{{ site.baseurl }}/assets/fonts/PingFang.ttc') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'source';
+    src: url('{{ site.baseurl }}/assets/fonts/SourceHanSansSC-Light.otf') format('truetype');
+  }
+
+  body {
+    font-family: 'source';
+  }
+
+  .custom-font {
+    font-family: 'pingfang';
+    font-size: 80px;
+  }
+
+  h4:hover {
+    color: #1e2022 ! important;
+  }
+
+  .divider {
+    display: flex;
+    align-items:center
+  }
+
+  .divider::after, .divider::before {
+    flex: 1 1 0%;
+    border-top: .0625rem solid #677788;
+    content: "";
+    margin-top:.0625rem
+  }
+
+  .divider::before {
+    margin-right:1.5rem
+  }
+
+  .divider::after {
+    margin-left:1.5rem
+  }
+
+  .text-bones {
+    color:#0066da
+  }
+
+  .bg-bones {
+    background-color:#0066da
+  }
+
+  .avatar-xxxxl {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  /* Cursor */
+  .typed-cursor {
+    font-size: 10rem;
+    color: #D93034;
+  }
+
+  .product-avatar {
+    font-size: 10rem;
+    color: #D93034;
+  }
+</style>
