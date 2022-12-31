@@ -2,13 +2,13 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "Bone's Technology Limited"
+brand: "博志生物科技"
 
 # text below the brand name
 brand_sub_text: "$site_sample"
 
 # used for seo meta post author (if it's not defined in post)
-name: "Marketing Dept"
+name: "市场部"
 
 # home page top header texts
 home:

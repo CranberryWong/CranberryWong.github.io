@@ -286,6 +286,9 @@
                     </li>
 
                     <li class="nav-item">
+                        {%- if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 %}
+                            {% include default/nav/lang-switch.html -%}
+                        {% endif %}
                         <a class="nav-link" href="./en.html">English</a>
                     </li>
                 </ul>

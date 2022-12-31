@@ -49,13 +49,7 @@ or site.data.conf.main.color_scheme_browser_color_mode -%}
       <!-- ========== MAIN CONTENT ========== -->
 
   <main id="content" role="main">
-    {% include default/main/main-hero.html -%}
-    {% include default/main/main-intro.html -%}
-    <div class="border-top mx-auto mt-10 mb-10" style="max-width: 25rem;"></div>
-    {% include default/main/main-product.html -%}
-    {% include default/main/main-leadership.html -%}
-    {% include default/main/main-partners.html -%}
-    {% include default/main/main-award.html -%}
+    {{ content }}
   </main>
   <!-- ========== END MAIN CONTENT ========== -->    
 
