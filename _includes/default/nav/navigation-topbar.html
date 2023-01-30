@@ -28,9 +28,7 @@
             <!-- Collapse -->
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul id="navbarNavDropdownNav" class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#About">关于博志</a>
-                    </li>
+                    {% include default/nav/navigation-buttons.html effect = site.data.conf.main.side_nav_buttons_hover_effect -%}
 
                     <!-- Solutions -->
                     <li class="hs-has-mega-menu nav-item">
@@ -47,7 +45,7 @@
                                         <div class="d-flex">
                                             <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
-                            <img class="avatar avatar-lg avatar-4x3" src="static/images/product/robot.png" alt="Image Description">
+                            <img class="avatar avatar-lg avatar-4x3" src="{{ site.baseurl }}/assets/img/product/robot.png" alt="Image Description">
 
                           </span>
                                             </div>
@@ -69,7 +67,7 @@
                                         <div class="d-flex">
                                             <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
-                            <img class="avatar avatar-lg avatar-4x3" src="static/images/product/p5.png" alt="Image Description">
+                            <img class="avatar avatar-lg avatar-4x3" src="{{ site.baseurl }}/assets/img/product/p5.png" alt="Image Description">
 
                           </span>
                                             </div>
@@ -100,7 +98,7 @@
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
-                                                <span class="navbar-dropdown-menu-media-title">Jobs <span class="badge bg-success rounded-pill ms-1">Hot</span></span>
+                                                <span class="navbar-dropdown-menu-media-title">QCT <span class="badge bg-success rounded-pill ms-1">Hot</span></span>
                                                 <p class="navbar-dropdown-menu-media-desc">Search millions of jobs online to find the next step in your career.</p>
                                             </div>
                                         </div>
@@ -135,7 +133,7 @@
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
-                                                <span class="navbar-dropdown-menu-media-title">Course <span class="badge bg-success rounded-pill ms-1">Hot</span></span>
+                                                <span class="navbar-dropdown-menu-media-title">骨科诊疗一体机 Bone's X <span class="badge bg-success rounded-pill ms-1">Hot</span></span>
                                                 <p class="navbar-dropdown-menu-media-desc">Learn on your schedule. An online learning and teaching demo.</p>
                                             </div>
                                         </div>
@@ -268,29 +266,6 @@
                         <!-- End Mega Menu -->
                     </li>
                     <!-- End Solutions -->
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Team">领导力</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Partners">合作伙伴</a>
-                    </li>
-
-                    <!-- <li class="nav-item">
-                      <a class="nav-link" href="#HireUS">人才招聘</a>
-                    </li> -->
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Contact">联系我们</a>
-                    </li>
-
-                    <li class="nav-item">
-                        {%- if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 %}
-                            {% include default/nav/lang-switch.html -%}
-                        {% endif %}
-                        <a class="nav-link" href="./en.html">English</a>
-                    </li>
                 </ul>
             </div>
             <!-- End Collapse -->

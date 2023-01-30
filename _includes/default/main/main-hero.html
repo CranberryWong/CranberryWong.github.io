@@ -22,9 +22,9 @@
     </div>
 
     <!-- Video Background -->
-    <div class="container rounded-2" style="position: relative; padding: 30% 45%;">
+    <div class="container rounded-2" style="position: relative; padding:20% 45%;">
         <!-- <iframe src="https://player.bilibili.com/player.html?aid=468189382&bvid=BV1v541127Ja&cid=576301473&page=1&high_quality=1&danmaku=0"  style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"  allowfullscreen="allowfullscreen" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe> -->
-        <iframe src='https://player.youku.com/embed/XNTg5MjI4MjI3Ng=='  style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" frameborder=0 'allowfullscreen'></iframe>
+        <iframe src='https://player.youku.com/embed/XNTg5MjI4MjI3Ng=='  style="position: absolute; width:50%; height: 45%; left: 0; top: 0;" frameborder=0 'allowfullscreen'></iframe>
         <!-- <div class="video-bg">
           <div class="js-video-bg video-bg-content"
                data-hs-video-bg-options='{
@@ -36,6 +36,51 @@
         </div> -->
     </div>
     <!-- End Video Background -->
+
+    <div class="multipurpose-container home-heading-container">
+        <div class="home-heading" {{ home_img_background_style }}>
+          {{ home_img_tag }}
+          <div class="home-heading-message">
+            {{ site.data.owner[lng].home.top_header_line1
+              | replace: site.data.conf.main.brand_replace, site.data.owner[lng].brand
+              | replace: site.data.conf.main.greetings_replace, site.data.lang[lng].constants.greetings
+              | replace: site.data.conf.main.welcome_replace, site.data.lang[lng].constants.welcome }}
+            {%- if site.data.owner[lng].home.top_header_line2 %}
+              <br>
+              {{ site.data.owner[lng].home.top_header_line2
+                | replace: site.data.conf.main.brand_replace, site.data.owner[lng].brand
+                | replace: site.data.conf.main.greetings_replace, site.data.lang[lng].constants.greetings
+                | replace: site.data.conf.main.welcome_replace, site.data.lang[lng].constants.welcome }}
+            {% endif -%}
+          </div>
+        </div>
+        <div class="home-intro-text markdown-style">
+          {{ content }}
+        </div>
+      </div>
+
+      {%- if lng_pages.size > 0 and site.data.conf.others.home.new_posts %}
+<div class="multipurpose-container new-posts-container">
+  <h1>{{ site.data.lang[lng].home.new_posts_title }}</h1>
+  <ul class="new-posts">
+  {%- for _post in lng_pages limit: site.data.conf.others.home.new_posts_count_limit -%}
+    <li>
+      {%- assign page_title = _post.title -%}
+      {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
+      {%- include multi_lng/get-localized-long-date-format.liquid date = _post.date -%}
+      <a href="{{ site.baseurl }}{{ _post.url }}">{{ page_title }}
+        <span>{{ _post.date | date: out_date_format }}</span>
+      </a>
+    </li>
+  {% endfor -%}
+    <li>
+      {%- include multi_lng/get-page-by-layout.liquid layout = 'archives' -%}
+      <a href="{{ site.baseurl }}{{ layout_page_obj.url }}">{{ site.data.lang[lng].home.new_posts_show_more_button }}</a>
+    </li>
+  </ul>
+</div>
+{% endif -%}
+
 
     <div class="row mb-sm-3 mb-md-0 mt-8">
         <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">

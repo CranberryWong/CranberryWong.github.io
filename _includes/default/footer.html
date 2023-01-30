@@ -42,21 +42,22 @@
       {% if site.data.conf.main.main_footer -%}
       <!-- Logo -->
       <a class="d-inline-flex align-items-center mb-3" href="index.html" aria-label="Front">
-        <img class="brand" src="{{ site.baseurl }}/assets/img/svg/logos/bones-logo.svg" alt="Logo">
+        <img class="brand" src="{{ site.baseurl }}{{ site.data.owner[lng].brand_url }}" alt="Logo">
       </a>
       <!-- End Logo -->
 
       <!-- List -->
       <div class="col-lg-12 mb-12 mb-sm-0 text-center">
-        <img src="{{ site.baseurl }}/assets/img/barcodes/WechatQRCode-new.png" alt="" style="width:10%" class="ml-n3">
+        <img src="{{ site.baseurl }} +/assets/img/barcodes/WechatQRCode-new.png" alt="" style="width:10%" class="ml-n3">
       </div>
       <ul class="list-unstyled list-py-1 align-items-left">
-        <li><a class="link-sm link-secondary" href="#Contact"><i class="bi-geo-alt-fill me-1"></i>
-          全球总部：香港科学园科技大道西19号19W大楼2楼237室</a></li>
-        <li><a class="link-sm link-secondary" href="#Contact"><i class="bi-geo-alt-fill me-1"></i>
-          中国区总部：深圳市南山区南山街道港城街99号前海颐都大厦1202</a></li>
+        <li><a class="link-sm link-secondary" href="#Contact"><i class="{{ site.data.owner[lng].contact.global_address.icon }} me-1"></i>
+         {{ site.data.owner[lng].contact.global_address.position }}</a></li>
+        <li><a class="link-sm link-secondary" href="#Contact"><i class="{{ site.data.owner[lng].contact.china_address.icon }} me-1"></i>
+          {{ site.data.owner[lng].contact.china_address.position }}
+          </a></li>
         <li><a class="link-sm link-secondary" href="#Contact"><i
-                class="bi-telephone-inbound-fill me-1"></i> 0755-86967114</a></li>
+                class="bi-telephone-inbound-fill me-1"></i> {{ site.data.owner[lng].contact.phone.number }}</a></li>
         <li><a class="link-sm link-secondary" href="mailto: service@bonestech.com"><i
                 class="bi bi-envelope-fill me-1"></i> service@bonestech.com</a></li>
       </ul>

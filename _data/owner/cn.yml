@@ -4,6 +4,14 @@
 # This is your brand name
 brand: "博志生物科技"
 
+brand_url: "/assets/svg/logos/bones-logo.svg"
+
+# brand:
+ # title: "博志生物科技"
+ # company: "博志生物科技有限公司"
+ # logo_url: "{{ site.baseurl }}/assets/svg/logos/bones-logo.svg"
+
+
 # text below the brand name
 brand_sub_text: "$site_sample"
 
@@ -79,3 +87,20 @@ google_site_verification: ""
 # - Click the link icon from "Send via" list and copy the link.
 # - Then paste the link between double quotes.
 google_forms_contact_form_url: ""
+
+contact: 
+  global_address:
+    icon: "bi-geo-alt-fill"
+    position: "全球总部：香港科学园科技大道西19号19W大楼2楼237室"
+
+  china_address:
+    icon: "bi-geo-alt-fill"
+    position: "中国区总部：深圳市南山区南山街道港城街99号前海颐都大厦1202"
+
+  phone:
+    icon: "bi-telephone-inbound-fill"
+    number: "0755-86967114"
+
+  mail:
+    icon: "bi bi-envelope-fill"
+    service: "service@bonestech.com"

@@ -16,9 +16,4 @@ layout: default
     {%- capture home_img_background_style -%} style="background-image:url('{{ page.img }}');" {%- endcapture -%}
   {%- endif -%}
 {%- endif -%}
-
-  {% include default/main/main-hero.html -%}
-  {% include default/main/main-intro.html -%}
-  <div class="border-top mx-auto mt-10 mb-10" style="max-width: 25rem;"></div>
-  {% include default/main/main-partners.html -%}
-  {% include default/main/main-award.html -%}
+{% include default/main/main-product.html -%}

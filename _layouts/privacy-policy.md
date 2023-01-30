@@ -1,7 +1,6 @@
 ---
-# Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
-# Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
-# Licensed under MIT
+# Developed by Chen Wang, 2022-01-19
+# Based on the Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
 
 layout: default
 ---

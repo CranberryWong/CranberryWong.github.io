@@ -106,8 +106,8 @@ post:
 
 # for post-list layout
 post-list:
-  title: ブログ
-  button_name: ブログ
+  title: 新闻
+  button_name: 新闻
   upside_down_tabs:
     tab:
       all: 全て
@@ -130,34 +130,34 @@ post-list:
 
 # for home layout
 home:
-  title: ようこそ
-  button_name: ホーム
-  new_posts_title: 新着記事
-  new_posts_show_more_button: もっと見る ...
+  title: 博志生物科技
+  button_name: 主页
+  new_posts_title: 最近新闻
+  new_posts_show_more_button: 更多新闻...
 
 # for archives layout
 archives:
-  title: アーカイブ
-  button_name: アーカイブ
-  page_header: アーカイブ
+  title: 归档
+  button_name: 归档
+  page_header: 归档
 
 # for about layout
 about:
-  title: 私について
-  button_name: 私について
-  email_title: メール
+  title: 关于我们
+  button_name: 关于我们
+  email_title: 邮箱
 
-# for links layout
-links:
-  title: リンク
-  button_name: リンク
-  link_text: Webサイト
-  info_text: 説明
+# for products layout
+products:
+  title: 解决方案
+  button_name: 解决方案
+  read_more_text: 続きを読む
+  read_less_text: 閉じる
 
-# for projects layout
-projects:
-  title: プロジェクト
-  button_name: プロジェクト
+# for leadership layout
+leadership:
+  title: 团队
+  button_name: 团队
   read_more_text: 続きを読む
   read_less_text: 閉じる
 
